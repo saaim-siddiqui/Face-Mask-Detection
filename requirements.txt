@@ -6,7 +6,6 @@ Jinja2==3.0.1
 joblib==1.0.1
 MarkupSafe==2.0.1
 numpy==1.20.3
-opencv-python==4.5.2.54
 regex==2021.4.4
 scikit-learn==0.24.2
 scipy==1.6.3
@@ -14,4 +13,5 @@ sklearn==0.0
 six==1.14.0
 threadpoolctl==2.1.0
 Werkzeug==2.0.1
+scikit-image==0.18.1
 
