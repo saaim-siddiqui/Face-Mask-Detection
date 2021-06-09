@@ -10,7 +10,7 @@ import pickle
 
 UPLOAD_FOLDER = 'static/uploads/'
 
-app = Flask(_name_)
+app = Flask(__name__)
 app.secret_key = "secret key"
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
@@ -58,10 +58,9 @@ def upload_image():
     else:
         flash('Allowed image types are -> png, jpg, jpeg, gif')
         return redirect(request.url)
-
-
+    
 @app.route('/display/<filename>')
 def display_image(filename):
     return redirect(url_for('static', filename='uploads/' + filename), code=301)
-if _name_ == "_main_":
+if __name__ == "__main__":
     app.run(debug = True)
